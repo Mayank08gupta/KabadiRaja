@@ -8,9 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(
-  "mongodb+srv://Mayank:Kabadi@cluster0.svtl6wm.mongodb.net/kabadiraja?retryWrites=true&w=majority&appName=Cluster0"
-)
+mongoose.connect(process.env.MONGO_URI)
 .then(() => {
   console.log("MongoDB Connected ✅");
 })

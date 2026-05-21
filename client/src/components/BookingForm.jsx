@@ -24,7 +24,7 @@ function BookingForm() {
     // Backend API Call
     try {
 
-      const response = await fetch("http://localhost:5000/book", {
+      const response = await fetch("https://kabadiraja.onrender.com/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
