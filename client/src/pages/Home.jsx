@@ -147,7 +147,7 @@ function Home() {
           </div>
 
           <div className="mt-6 md:mt-0 text-center md:text-right">
-            <p>📞 +91 7052810810</p>
+            <p>📞 +91 6392494908</p>
             <p className="mt-2">📧 support@ScrapGo.in</p>
           </div>
 

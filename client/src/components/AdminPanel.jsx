@@ -7,7 +7,7 @@ function AdminPanel() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      fetch("https://ScrapGo.onrender.com/bookings")
+      fetch("https://scrapgo.onrender.com/bookings")
         .then((res) => res.json())
         .then((data) => setBookings(data))
         .catch((err) => console.error(err));
@@ -23,14 +23,15 @@ function AdminPanel() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`https://ScrapGo.onrender.com/booking/${id}`, {
+    await fetch(`https://scrapgo.onrender.com/booking/${id}`, {
       method: "DELETE",
     });
+
     setBookings(bookings.filter((item) => item._id !== id));
   };
 
   const handleStatusChange = async (id, newStatus) => {
-    await fetch(`https://ScrapGo.onrender.com/booking/${id}`, {
+    await fetch(`https://scrapgo.onrender.com/booking/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -49,6 +50,7 @@ function AdminPanel() {
     return (
       <section className="min-h-screen flex items-center justify-center bg-gray-100 px-6">
         <div className="bg-white p-10 rounded-3xl shadow-xl w-full max-w-md">
+
           <h2 className="text-3xl font-bold text-center text-green-700 mb-6">
             Admin Login
           </h2>
@@ -67,6 +69,7 @@ function AdminPanel() {
           >
             Login
           </button>
+
         </div>
       </section>
     );
@@ -74,13 +77,19 @@ function AdminPanel() {
 
   return (
     <section className="px-6 py-10">
+
       <h2 className="text-4xl font-bold text-green-700 text-center mb-8">
         Admin Dashboard
       </h2>
 
       <div className="max-w-6xl mx-auto grid gap-6">
+
         {bookings.map((item, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-2xl p-6 border">
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-2xl p-6 border"
+          >
+
             <p><strong>Name:</strong> {item.name}</p>
             <p><strong>Phone:</strong> {item.phone}</p>
             <p><strong>Scrap Type:</strong> {item.scrapType}</p>
@@ -90,7 +99,9 @@ function AdminPanel() {
             <p><strong>Status:</strong> {item.status || "Pending"}</p>
 
             <select
-              onChange={(e) => handleStatusChange(item._id, e.target.value)}
+              onChange={(e) =>
+                handleStatusChange(item._id, e.target.value)
+              }
               value={item.status || "Pending"}
               className="mt-4 border p-2 rounded-lg mr-4"
             >
@@ -105,9 +116,12 @@ function AdminPanel() {
             >
               Delete
             </button>
+
           </div>
         ))}
+
       </div>
+
     </section>
   );
 }

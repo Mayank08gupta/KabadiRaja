@@ -43,7 +43,7 @@ function App() {
         </div>
 
         <a
-          href="https://wa.me/917052810810"
+          href="https://wa.me/916392494908"
           target="_blank"
           className="bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-800 transition"
         >
@@ -460,7 +460,7 @@ function App() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/917052810810"
+        href="https://wa.me/916392494908"
         target="_blank"
         className="fixed bottom-6 right-6 bg-green-600 text-white p-5 rounded-full shadow-2xl hover:bg-green-700 transition text-3xl"
       >
@@ -748,7 +748,7 @@ function App() {
 
           <div className="mt-6 md:mt-0 text-center md:text-right">
 
-            <p>📞 +91 7052810810</p>
+            <p>📞 +91 6392494908</p>
             <p className="mt-2">📧 support@ScrapGo.in</p>
 
           </div>

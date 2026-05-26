@@ -21,10 +21,10 @@ function BookingForm() {
 
   const handleSubmit = async () => {
 
-    // Backend API Call
     try {
 
-      const response = await fetch("https://ScrapGo.onrender.com/book", {
+      // Backend API Call
+      const response = await fetch("https://scrapgo.onrender.com/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,8 @@ Date: ${formData.date}
 Time: ${formData.time}
 `;
 
-        const url = `https://wa.me/917052810810?text=${encodeURIComponent(message)}`;
+        // WhatsApp Redirect
+        const url = `https://wa.me/916392494908?text=${encodeURIComponent(message)}`;
 
         window.open(url, "_blank");
 
@@ -66,6 +67,8 @@ Time: ${formData.time}
           time: "",
         });
 
+      } else {
+        alert("Booking Failed ❌");
       }
 
     } catch (error) {
