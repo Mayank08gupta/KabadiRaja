@@ -13,24 +13,28 @@ function BookingForm() {
   });
 
   const handleChange = (e) => {
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+
   };
 
   const handleSubmit = async () => {
 
     try {
 
-      // Backend API Call
-      const response = await fetch("https://scrapgo.onrender.com/book", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://kabadiraja.onrender.com/book",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -38,7 +42,6 @@ function BookingForm() {
 
         alert("Booking Submitted Successfully ✅");
 
-        // WhatsApp Message
         const message = `
 🟢 ScrapGo Pickup Request
 
@@ -51,12 +54,11 @@ Date: ${formData.date}
 Time: ${formData.time}
 `;
 
-        // WhatsApp Redirect
-        const url = `https://wa.me/916392494908?text=${encodeURIComponent(message)}`;
+        const url =
+          `https://wa.me/916392494908?text=${encodeURIComponent(message)}`;
 
         window.open(url, "_blank");
 
-        // Reset Form
         setFormData({
           name: "",
           phone: "",
@@ -68,17 +70,23 @@ Time: ${formData.time}
         });
 
       } else {
+
         alert("Booking Failed ❌");
+
       }
 
     } catch (error) {
+
       console.log(error);
+
       alert("Something went wrong ❌");
+
     }
 
   };
 
   return (
+
     <section className="mt-20 px-6 mb-20">
 
       <div className="max-w-4xl mx-auto bg-gray-50 shadow-2xl rounded-3xl p-10 border">
@@ -91,7 +99,6 @@ Time: ${formData.time}
           Fill details and we will contact you instantly
         </p>
 
-        {/* Grid Inputs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
 
           <input
@@ -100,7 +107,7 @@ Time: ${formData.time}
             value={formData.name}
             onChange={handleChange}
             placeholder="Full Name"
-            className="border p-3 rounded-xl w-full text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border p-3 rounded-xl w-full"
           />
 
           <input
@@ -109,7 +116,7 @@ Time: ${formData.time}
             value={formData.phone}
             onChange={handleChange}
             placeholder="Phone Number"
-            className="border p-3 rounded-xl w-full text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border p-3 rounded-xl w-full"
           />
 
           <input
@@ -118,7 +125,7 @@ Time: ${formData.time}
             value={formData.altPhone}
             onChange={handleChange}
             placeholder="Alternate Number"
-            className="border p-3 rounded-xl w-full text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border p-3 rounded-xl w-full"
           />
 
           <input
@@ -126,22 +133,20 @@ Time: ${formData.time}
             name="scrapType"
             value={formData.scrapType}
             onChange={handleChange}
-            placeholder="Scrap Type (Plastic, Iron, etc)"
-            className="border p-3 rounded-xl w-full text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+            placeholder="Scrap Type"
+            className="border p-3 rounded-xl w-full"
           />
 
         </div>
 
-        {/* Address */}
         <textarea
           name="address"
           value={formData.address}
           onChange={handleChange}
           placeholder="Full Address"
-          className="border p-3 rounded-xl w-full mt-5 h-28 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="border p-3 rounded-xl w-full mt-5 h-28"
         />
 
-        {/* Date Time */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
 
           <input
@@ -149,7 +154,7 @@ Time: ${formData.time}
             name="date"
             value={formData.date}
             onChange={handleChange}
-            className="border p-3 rounded-xl w-full text-black focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border p-3 rounded-xl w-full"
           />
 
           <input
@@ -157,15 +162,14 @@ Time: ${formData.time}
             name="time"
             value={formData.time}
             onChange={handleChange}
-            className="border p-3 rounded-xl w-full text-black focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border p-3 rounded-xl w-full"
           />
 
         </div>
 
-        {/* Button */}
         <button
           onClick={handleSubmit}
-          className="w-full mt-8 bg-green-600 text-white py-4 rounded-xl text-lg font-bold hover:bg-green-700 shadow-lg"
+          className="w-full mt-8 bg-green-600 text-white py-4 rounded-xl text-lg font-bold hover:bg-green-700"
         >
           Book Pickup Now
         </button>
@@ -173,7 +177,9 @@ Time: ${formData.time}
       </div>
 
     </section>
+
   );
+
 }
 
 export default BookingForm;
