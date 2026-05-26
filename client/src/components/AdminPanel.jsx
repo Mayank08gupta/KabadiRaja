@@ -7,7 +7,7 @@ function AdminPanel() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      fetch("https://kabadiraja.onrender.com/bookings")
+      fetch("https://ScrapGo.onrender.com/bookings")
         .then((res) => res.json())
         .then((data) => setBookings(data))
         .catch((err) => console.error(err));
@@ -23,14 +23,14 @@ function AdminPanel() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`https://kabadiraja.onrender.com/booking/${id}`, {
+    await fetch(`https://ScrapGo.onrender.com/booking/${id}`, {
       method: "DELETE",
     });
     setBookings(bookings.filter((item) => item._id !== id));
   };
 
   const handleStatusChange = async (id, newStatus) => {
-    await fetch(`https://kabadiraja.onrender.com/booking/${id}`, {
+    await fetch(`https://ScrapGo.onrender.com/booking/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

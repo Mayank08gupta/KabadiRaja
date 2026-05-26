@@ -13,7 +13,7 @@ function Admin() {
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <h1 className="text-4xl font-bold text-green-700 text-center mb-10">
-        KabadiRaja Admin Panel
+        ScrapGo Admin Panel
       </h1>
 
       <div className="grid gap-6">

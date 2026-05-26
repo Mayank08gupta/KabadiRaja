@@ -18,7 +18,7 @@ function App() {
 
         <div>
           <h1 className="text-3xl font-bold text-green-700">
-            KabadiRaja
+            ScrapGo
           </h1>
 
           <p className="text-sm text-gray-500">
@@ -313,7 +313,7 @@ function App() {
         </h2>
 
         <p className="text-gray-600 text-xl mt-5 max-w-3xl mx-auto">
-          Invite your friends to KabadiRaja and earn extra rewards
+          Invite your friends to ScrapGo and earn extra rewards
           when they book scrap pickup through your referral.
         </p>
 
@@ -418,7 +418,7 @@ function App() {
               </h3>
 
               <p className="text-gray-600 mt-3">
-                Our KabadiRaja team reaches your location and collects the scrap.
+                Our ScrapGo team reaches your location and collects the scrap.
               </p>
 
             </div>
@@ -535,7 +535,7 @@ function App() {
         <div className="text-center">
 
           <h2 className="text-5xl font-bold text-green-800">
-            Why Choose KabadiRaja?
+            Why Choose ScrapGo?
           </h2>
 
           <p className="text-gray-600 mt-5 text-lg">
@@ -673,7 +673,7 @@ function App() {
     </h2>
 
     <p className="text-gray-600 mt-5 text-lg">
-      Everything you need to know about KabadiRaja
+      Everything you need to know about ScrapGo
     </p>
 
   </div>
@@ -738,7 +738,7 @@ function App() {
 
           <div>
             <h2 className="text-3xl font-bold text-green-500">
-              KabadiRaja
+              ScrapGo
             </h2>
 
             <p className="text-gray-400 mt-2">
@@ -749,7 +749,7 @@ function App() {
           <div className="mt-6 md:mt-0 text-center md:text-right">
 
             <p>📞 +91 7052810810</p>
-            <p className="mt-2">📧 support@kabadiraja.in</p>
+            <p className="mt-2">📧 support@ScrapGo.in</p>
 
           </div>
 

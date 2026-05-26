@@ -1,4 +1,6 @@
+
 const express = require("express");
+require("dotenv").config();
 const cors = require("cors");
 const mongoose = require("mongoose");
 
@@ -36,7 +38,7 @@ const Booking = mongoose.model("Booking", bookingSchema);
 
 // Test Route
 app.get("/", (req, res) => {
-  res.send("KabadiRaja Backend Running 🚀");
+  res.send("ScrapGo Backend Running 🚀");
 });
 
 // Save Booking

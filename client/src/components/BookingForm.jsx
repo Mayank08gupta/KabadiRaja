@@ -24,7 +24,7 @@ function BookingForm() {
     // Backend API Call
     try {
 
-      const response = await fetch("https://kabadiraja.onrender.com/book", {
+      const response = await fetch("https://ScrapGo.onrender.com/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function BookingForm() {
 
         // WhatsApp Message
         const message = `
-🟢 KabadiRaja Pickup Request
+🟢 ScrapGo Pickup Request
 
 Name: ${formData.name}
 Phone: ${formData.phone}

@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/rates" element={<RatesPage />} />
-        <Route path="/admin-secret-kabadiraja" element={<AdminPanel />} />
+        <Route path="/admin-secret-ScrapGo" element={<AdminPanel />} />
    
       </Routes>
     </BrowserRouter>

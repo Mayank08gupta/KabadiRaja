@@ -7,7 +7,7 @@ function Home() {
 
         <div>
           <h1 className="text-3xl font-bold text-green-700">
-            KabadiRaja
+            ScrapGo
           </h1>
 
           <p className="text-sm text-gray-500">
@@ -138,7 +138,7 @@ function Home() {
 
           <div>
             <h2 className="text-3xl font-bold text-green-500">
-              KabadiRaja
+              ScrapGo
             </h2>
 
             <p className="text-gray-400 mt-2">
@@ -148,7 +148,7 @@ function Home() {
 
           <div className="mt-6 md:mt-0 text-center md:text-right">
             <p>📞 +91 7052810810</p>
-            <p className="mt-2">📧 support@kabadiraja.in</p>
+            <p className="mt-2">📧 support@ScrapGo.in</p>
           </div>
 
         </div>
